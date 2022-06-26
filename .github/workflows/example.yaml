@@ -1,0 +1,11 @@
+on:
+  # This allows us to manually trigger the workflow
+  workflow_dispatch:
+
+jobs:
+  github-action-go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # Using the action defined in the same repository
+      - uses: ./
